@@ -1,0 +1,9 @@
+/api/auth 
+--auth/signup 
+--auth/login
+
+/api/books
+--/:id; 
+----rating
+--/bestrating 
+

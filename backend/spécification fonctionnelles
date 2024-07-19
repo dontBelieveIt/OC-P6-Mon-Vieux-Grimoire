@@ -1,0 +1,22 @@
+Header : 
+logo + menu 
+menu = 
+-accueil 
+-créer un livre
+-déconnexion 
+
+Footer: 
+adresse + numéro de téléphone + visuel d'une carte + copyright
+
+Accueil : 
+Présenter la liste de l'ensemble des ouvrages ayant été ajouté par les utilisateurs. Visibles par tous les visiterus. 
+Titre + images des livres doivent être visible
+
+Livres: 
+page doit présenter l'intégralité des informations rattachées à un livre: 
+image, titre, auteur, année, genre + note moyenne( x/5); 
+
+création de livres: 
+utilisateur à la possibilité de créer un livre => image, titre, auteur, année + genre; 
+bouton validation
+

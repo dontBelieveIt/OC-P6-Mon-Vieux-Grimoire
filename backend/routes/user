@@ -1,0 +1,7 @@
+page pour permettre l'inscription/connexion des utilsiateurs
+
+doit contenir : deux champs de saisie 
+un champ mail + champ mot de passe 
+deux boutons : un bouton inscription et un bouton connexion 
+
+Ne contient ni header ni footer
