@@ -1,1 +1,7 @@
-page présentant toutes les informations sur un livre proposé
+
+
+
+/api/books => GET + POST(auth)
+--/:id; => GET  + PUT(auth) + DELETE(auth)
+----rating => POST(auth)
+--/bestrating => GET 
