@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 
 const app = express();
+const userRoutes = require('./routes/user')
 
 // Connexion to MongoDB, Cluster 0
 mongoose.connect('mongodb+srv://visitor:ickI98YeFKJbwzh7@cluster0.s8f2adz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
@@ -20,11 +21,6 @@ app.use((req, res, next) => {
     next();
   });
 
-  app.post('/api/stuff', (req, res, next) => {
-    console.log('This is my first post request :) ');
-    res.status(201).json({
-      message: 'Objet créé !'
-    });
-  });
+app.use('/api/auth', userRoutes)
 
 module.exports = app;
