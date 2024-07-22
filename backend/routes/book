@@ -1,7 +1,0 @@
-
-
-
-// /api/books => GET + POST(auth)
-// --/:id; => GET  + PUT(auth) + DELETE(auth)
-// ----rating => POST(auth)
-// --/bestrating => GET 
