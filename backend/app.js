@@ -9,8 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.xml());
 
-const userRoutes = require('./routes/user');
-const bookRoutes = require('./routes/book');
+const userRoutes = require('./routes/user.router');
+const bookRoutes = require('./routes/book.router');
 
 // Connexion to MongoDB, Cluster 0
 mongoose.connect('mongodb+srv://visitor:ickI98YeFKJbwzh7@cluster0.s8f2adz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
@@ -33,5 +33,6 @@ app.use((req, res, next) => {
 
 app.use('/api/auth', userRoutes); 
 app.use('/api/books', bookRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 module.exports = app;
