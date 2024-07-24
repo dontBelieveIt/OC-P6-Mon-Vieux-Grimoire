@@ -14,6 +14,7 @@
     "body-parser-xml": "^2.0.5",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1",
     "mongoose-unique-validator": "^5.0.1",

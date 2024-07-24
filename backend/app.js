@@ -13,11 +13,7 @@ const userRoutes = require('./routes/user.router');
 const bookRoutes = require('./routes/book.router');
 
 // Connexion to MongoDB, Cluster 0
-mongoose.connect('mongodb+srv://visitor:ickI98YeFKJbwzh7@cluster0.s8f2adz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
-    { 
-        useNewUrlParser: true,
-        useUnifiedTopology: true 
-    })
+mongoose.connect('mongodb+srv://visitor:ickI98YeFKJbwzh7@cluster0.s8f2adz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('Connexion à MongoDB réussie :) !'))
     .catch(() => console.log('Connexion à MangoDB échouee :( !'));
     

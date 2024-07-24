@@ -28,16 +28,15 @@ exports.login = (req, res, next) => {
                             res.status(401).json({ message : "Pair identifiant/mot de passe incorrecte."})
                         } else {
                             res.status(200).json({
-                                userID : user.__id,
+                                userId: user._id,
                                 token: jwt.sign(
-                                    {userId : user.id},
-                                    'RANDOM-TOKEN_SECRET',
+                                    { userId: user._id },
+                                    'RANDOM_TOKEN_SECRET',
                                     { expiresIn: '24h' }
                                 ),
                                 message : "Token créé !",
-                            });
+                            }); 
                         }
-
                     })
                     .catch(error => 
                         res.status(500).json({ error })
