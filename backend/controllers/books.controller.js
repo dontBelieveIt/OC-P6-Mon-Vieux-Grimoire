@@ -134,5 +134,15 @@ exports.noteThisBook = async (req, res, next) => {
 
 // Placeholder for bestRatingBooks function
 exports.bestRatingBooks = (req, res, next) => {
-  // Implementation to be done
+  Book.find()
+  .then(bestBooks => {
+
+    const sortBooks = bestBooks.sort(function(a, b) {
+      return b.averageRating - a.averageRating;
+    });
+    const threeBest = sortBooks.slice(0, 3);
+
+    res.status(200).json(threeBest)
+  })
+  .catch(error => res.status(404).json({ error }));
 };

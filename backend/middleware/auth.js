@@ -7,7 +7,6 @@ module.exports = (req, res, next) => {
 		const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
 		const userId = decodedToken.userId;
 		req.auth = { userId };
-		console.log(req.auth.userId, req.auth);
 
 		if (req.body.userId && req.body.userId !== userId) {
 			throw "Une erreur s'est produite lors de l'autentification.";
