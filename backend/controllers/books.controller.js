@@ -98,7 +98,7 @@ exports.noteThisBook = async (req, res, next) => {
     console.log("Requesting user ID:", req.auth.userId);
 
     // Check if the user has already rated this book
-    const existingRating = book.ratings.find(r => r.userId === req.auth.userId);
+    const existingRating = book.ratings.includes(r => r.userId === req.auth.userId);
     if (existingRating) {
       console.log("User has already rated this book");
       return res.status(400).json({ message: "Vous ne pouvez pas noter deux fois le même livre." });
