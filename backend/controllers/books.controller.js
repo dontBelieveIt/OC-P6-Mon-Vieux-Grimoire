@@ -5,15 +5,15 @@ exports.createBooks = (req, res, next) => {
   const newBook = JSON.parse(req.body.book);
   delete newBook._id;
   delete newBook._userId;
-  delete newBook._ratings;
-  delete newBook._averageRating;
+  // delete newBook._ratings;
+  // delete newBook._averageRating;
 
   const book = new Book({
     ...newBook,
     userId: req.auth.userId,
     imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
-    ratings: [],
-    averageRating: 0
+    // ratings: [],
+    // averageRating: 0
   });
 
   book.save()

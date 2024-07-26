@@ -31,7 +31,7 @@ exports.login = (req, res, next) => {
                                 userId: user._id,
                                 token: jwt.sign(
                                     { userId: user._id },
-                                    'RANDOM_TOKEN_SECRET',
+                                    'TOKEN_SECRET=g$G_fR^%58UgTdPm^n478mp0hv@_7265a$%hdf?40zkjugefvNrf',
                                     { expiresIn: '24h' }
                                 ),
                                 message : "Token créé !",

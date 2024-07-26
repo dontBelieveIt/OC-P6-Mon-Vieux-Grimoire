@@ -4,7 +4,7 @@ module.exports = (req, res, next) => {
 	console.log("function has been called !");
 	try {
 		const token = req.headers.authorization.split(' ')[1];
-		const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
+		const decodedToken = jwt.verify(token, 'TOKEN_SECRET=g$G_fR^%58UgTdPm^n478mp0hv@_7265a$%hdf?40zkjugefvNrf');
 		const userId = decodedToken.userId;
 		req.auth = { userId };
 
