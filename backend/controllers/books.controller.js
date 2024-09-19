@@ -33,7 +33,7 @@ exports.getThisBook = (req, res, next) => {
       if (!book) {
         return res.status(404).json({ message: "Livre non trouvé." });
       }
-      console.log("Book userId:", book.userId);
+      // console.log("Book userId:", book.userId);
       res.status(200).json(book);
     })
     .catch(error => res.status(404).json({ error }));

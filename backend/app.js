@@ -4,6 +4,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 require('body-parser-xml')(bodyParser);
 const cors = require('cors'); 
+require('dotenv').config();
+
+const authToken = process.env.AUTH_TOKEN;
+const dbAccessKey = process.env.DB_ACCESS_KEY;
+console.log(`Auth Token: ${authToken}`);
+console.log(`Database Access Key: ${dbAccessKey}`);
 
 const app = express();
 app.use(express.json());
@@ -13,7 +19,7 @@ const userRoutes = require('./routes/user.router');
 const bookRoutes = require('./routes/book.router');
 
 // Connexion to MongoDB, Cluster 0
-mongoose.connect('mongodb+srv://visitor:ickI98YeFKJbwzh7@cluster0.s8f2adz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(dbAccessKey)
     .then(() => console.log('Connexion à MongoDB réussie :) !'))
     .catch(() => console.log('Connexion à MangoDB échouee :( !'));
     

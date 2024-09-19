@@ -1,10 +1,13 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
+const authToken = process.env.AUTH_TOKEN;
+console.log(process.env.AUTH_TOKEN, "this is the auth.js file")
 
 module.exports = (req, res, next) => {
 	console.log("function has been called !");
 	try {
 		const token = req.headers.authorization.split(' ')[1];
-		const decodedToken = jwt.verify(token, 'TOKEN_SECRET=g$G_fR^%58UgTdPm^n478mp0hv@_7265a$%hdf?40zkjugefvNrf');
+		const decodedToken = jwt.verify(token, authToken);
 		const userId = decodedToken.userId;
 		req.auth = { userId };
 

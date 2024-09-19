@@ -4,14 +4,14 @@ const path = require('path');
 
 const MIME_TYPES = {
   'image/jpg': 'jpg',
-  'image/jpeg': 'jpg',
+  'image/jpeg': 'jpeg',
   'image/png': 'png'
 };
 
-function fileFilter(req, file, cb) {
-  cb(MIME_TYPES, true)
-  cb(new Error("Le fichier doit-être une image ! (jpg, jpeg, png)."))
-}
+// function fileFilter(req, file, cb) {
+//   cb(MIME_TYPES, true)
+//   cb(new Error("Le fichier doit-être une image ! (jpg, jpeg, png)."))
+// }
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {

@@ -1,6 +1,9 @@
 const User = require('../models/User.model'); 
 const bcrypt = require('bcrypt'); 
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
+const authToken = process.env.AUTH_TOKEN;
+console.log(process.env.AUTH_TOKEN, "this is the controller file.")
 
 exports.signup = (req, res) => {
     bcrypt.hash(req.body.password, 10)
@@ -31,7 +34,7 @@ exports.login = (req, res, next) => {
                                 userId: user._id,
                                 token: jwt.sign(
                                     { userId: user._id },
-                                    'TOKEN_SECRET=g$G_fR^%58UgTdPm^n478mp0hv@_7265a$%hdf?40zkjugefvNrf',
+                                    authToken,
                                     { expiresIn: '24h' }
                                 ),
                                 message : "Token créé !",
