@@ -15,7 +15,6 @@ This project is part of the Web Developer program at OpenClassrooms. The objecti
 2. Navigate to the project directory.
 3. Run the following command to install all dependencies:
 ```bash
-Copy code
 npm install
 ```
 4.To set up the front-end, you can find the corresponding repository [here](https://github.com/OpenClassrooms-Student-Center/P7-Dev-Web-livres).
