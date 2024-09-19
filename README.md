@@ -19,14 +19,14 @@ npm install
 ```
 4.To set up the front-end, you can find the corresponding repository [here](https://github.com/OpenClassrooms-Student-Center/P7-Dev-Web-livres).
 
-##Usage
+## Usage
 This project is a school assignment and is not intended for production use. It showcases my skills in back-end development and is featured on my portfolio.
 
-##Contributing
+## Contributing
 This project is not open for contributions, as it is part of my portfolio and is based on a school assignment.
 
-##License
+## License
 All rights reserved. The content and code are owned by OpenClassrooms.
 
-##Contact
+## Contact
 For more information, you can reach me through my portfolio [here](https://roxane-myportefolio.netlify.app/).
