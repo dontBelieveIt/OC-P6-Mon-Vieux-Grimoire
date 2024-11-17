@@ -10,7 +10,7 @@ This project is part of the Web Developer program at OpenClassrooms. The objecti
 - **API Integration**: Provides endpoints for managing book data and user ratings.
 
 ## Appearance 
-![screenshot, mon vieux grimoire, landing page](demo_grimoire_landing-page.png) ![screenshot, mon vieux grimoire, login page](demo_grimoire_login-page.png) ![screenshot, mon vieux grimoire, data base connected](demo_grimoire_db-connected.png) ![screenshot, mon vieux grimoire, book page](demo_grimoire_book-page.png) ![screenshot, mon vieux grimoire, best book section](gdemo_grimoire_best-book.png)
+![screenshot, mon vieux grimoire, landing page](demo_grimoire_landing-page.png) ![screenshot, mon vieux grimoire, login page](demo_grimoire_login-page.png) ![screenshot, mon vieux grimoire, data base connected](demo_grimoire_db-connected.png) ![screenshot, mon vieux grimoire, book page](demo_grmoire_book-page.png) ![screenshot, mon vieux grimoire, best book section](demo_grimoire_best-book.png)
 
 ## Installation
 
